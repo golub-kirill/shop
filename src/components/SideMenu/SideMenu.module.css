@@ -1,0 +1,28 @@
+.sideMenu__wrapper {
+	position: absolute;
+	top: 10vh;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	width: 100vw;
+	height: calc(100vh - 10vh);
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.sideMenu__content {
+	width: 20%;
+	height: 100%;
+	margin: 1vh;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+	box-shadow: 0 0 20px #000;
+	background-color: rgba(0, 0, 0, 0.85);
+	color: #dbdfea;
+	border: rgba(219, 223, 234, 0.5) solid;
+}
+
+.sideMenu__hidden {
+	display: none;
+}

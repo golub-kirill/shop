@@ -125,7 +125,7 @@ export default function AuthForm() {
 			<div className={css.input__container}>
 				{/* Phone input */}
 				<label htmlFor="phone" className={css.input__label}>
-					Номер телефона
+					Phone
 				</label>
 				<input
 					autoFocus
@@ -149,13 +149,13 @@ export default function AuthForm() {
 					htmlFor="otp"
 					className={css.input__label}
 					hidden={isOtpInputHidden}>
-					Код подтверждения
+					Confirmation code
 				</label>
 				<input
 					ref={otpInput}
 					hidden={isOtpInputHidden}
 					className={css.input}
-					placeholder="Код из SMS"
+					placeholder="Code"
 					type="text"
 					name="otp"
 					value={formik.values.otp}
@@ -189,7 +189,7 @@ export default function AuthForm() {
 							? !!Object.keys(formik.errors.otp).length
 							: false
 					}>
-					Войти
+					Login
 				</StyledButton>
 			)}
 			{/* Errors list */}

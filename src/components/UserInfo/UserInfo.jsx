@@ -3,7 +3,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../controllers/authController";
-import { removeUserFromLS } from "../../controllers/userController";
+import { removeUserFromLocalStorage } from "../../controllers/userController";
 import { removeUser } from "../../store/slices/userSlice";
 import { StyledButton } from "../UI/Buttons/StyledButton";
 import css from "./UserInfo.module.css";
@@ -19,7 +19,7 @@ export const UserInfo = ({ isOpen, hideModal }) => {
 	const signout = () => {
 		logout();
 		dispatch(removeUser());
-		removeUserFromLS();
+		removeUserFromLocalStorage();
 		navigate("/auth");
 	};
 	return (

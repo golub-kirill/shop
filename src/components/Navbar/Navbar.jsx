@@ -5,6 +5,11 @@ import SideMenu from '../SideMenu/SideMenu';
 import { UserInfo } from '../UserInfo/UserInfo';
 import css from './Navbar.module.css';
 
+import menuSvg from '../../assets/svg/menu.svg'
+import userSvg from '../../assets/svg/user.svg'
+import cartSvg from '../../assets/svg/cart.svg'
+
+
 export const Navbar = ({ searchQuery, setSearchQuery, cartCount }) => {
     const [isUserInfoOpen, setUserInfoOpen] = React.useState(false);
     const [isCartOpen, setCartOpen] = React.useState(false);
@@ -23,7 +28,7 @@ export const Navbar = ({ searchQuery, setSearchQuery, cartCount }) => {
             <div className={css.leftSide}>
                 <img
                     className={css.menu__icon}
-                    src="/img/svg/menu.svg"
+                    src={menuSvg}
                     alt="menu"
                     onClick={() => setSideMenuOpen(!isSideMenuOpen)}
                 />
@@ -41,7 +46,7 @@ export const Navbar = ({ searchQuery, setSearchQuery, cartCount }) => {
                 {/* Get info about user and signout */}
                 <img
                     className={css.user__icon}
-                    src="/img/svg/user.svg"
+                    src={userSvg}
                     alt="user"
                     onClick={() => setUserInfoOpen(!isUserInfoOpen)}
                 />
@@ -50,7 +55,7 @@ export const Navbar = ({ searchQuery, setSearchQuery, cartCount }) => {
                 <div>
                     <img
                         className={css.cart__icon}
-                        src="/img/svg/cart.svg"
+                        src={cartSvg}
                         alt="cart"
                         onClick={() => setCartOpen(!isCartOpen)}
                     />

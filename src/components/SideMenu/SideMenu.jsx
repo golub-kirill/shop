@@ -3,6 +3,11 @@ import classNames from 'classnames';
 import { SideMenuItem } from '../SideMenuItem/SideMenuItem';
 import css from './SideMenu.module.css';
 
+import shop from '../../assets/svg/shop.svg'
+import contact from '../../assets/svg/contact-us.svg'
+import info from '../../assets/svg/manual-information.svg'
+
+
 export default function SideMenu({ isOpen, hideModal }) {
     const sideMenuClasses = classNames(css.sideMenu__wrapper, {
         [css.sideMenu__hidden]: !isOpen,
@@ -18,13 +23,13 @@ export default function SideMenu({ isOpen, hideModal }) {
             <div
                 className={css.sideMenu__content}
                 onClick={(event) => event.stopPropagation()}>
-                <SideMenuItem img="/img/svg/shop.svg" link="/shop">
+                <SideMenuItem img={shop} link="/shop">
                     Catalog
                 </SideMenuItem>
-                <SideMenuItem img="/img/svg/contact-us.svg" link="#">
+                <SideMenuItem img={contact} link="#">
                     Contacts
                 </SideMenuItem>
-                <SideMenuItem img="/img/svg/manual-information.svg" link="#">
+                <SideMenuItem img={info} link="#">
                     Anything
                 </SideMenuItem>
             </div>

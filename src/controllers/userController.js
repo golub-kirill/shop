@@ -23,6 +23,6 @@ export function getUserFromLS() {
 }
 
 // Remove user data from local storage.
-export function removeUserFromLS() {
+export function removeUserFromLocalStorage() {
 	localStorage.removeItem("user");
 }

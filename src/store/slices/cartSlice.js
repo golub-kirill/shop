@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getCartFromSS } from "../../controllers/cartController";
-const savedCart = getCartFromSS();
+import { getCartFromSessionStorage } from "../../controllers/cartController";
+const savedCart = getCartFromSessionStorage();
 const initialState = savedCart || [];
 
 const cartSlice = createSlice({

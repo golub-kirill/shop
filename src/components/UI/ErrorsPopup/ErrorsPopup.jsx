@@ -7,19 +7,19 @@ export default function ErrorsPopup(props) {
 
 	const errorHandler = (error) => {
 		if (error === undefined)
-			return "Перезагрузите страницу или попробуйте позже";
+			return "Reload page and try later.";
 		if (error === "auth/too-many-requests")
-			return "Слишком много попыток входа. Попробуйте позже";
+			return "Too many requests. Try later.";
 		if (error === "auth/invalid-phone-number")
-			return "Проверьте правильность ввода номера телефона";
+			return "Check your phone number and try again.";
 		if (error === "auth/operation-not-allowed")
-			return "Ошибка авторизации. Попробуйте позже";
+			return "Autorisation error. Try later.";
 		if (error === "auth/invalid-verification-code")
-			return "Проверьте правильность ввода кода из СМС";
+			return "Check your verification code and try again.";
 		if (error === "auth/user-disabled")
-			return "Ваш аккаунт заблокирован";
+			return "Your account is disabled";
 		if (error === "auth/code-expired")
-			return "Время действия кода истекло";
+			return "Verification code expired, try again.";
 
 		return error;
 	};

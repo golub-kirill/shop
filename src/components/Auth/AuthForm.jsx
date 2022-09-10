@@ -29,14 +29,15 @@ export default function AuthForm() {
 			otp: "",
 		},
 		validationSchema: Yup.object({
-			phone: Yup.string().required("Введите номер телефона"),
+			phone: Yup.string().required("Enter phone number."),
+			// TODO: Change regexp
 			// .matches(
 			// 	/^(\+38071)?[0-9]{7}$/gm,
-			// 	"Проверьте правильность ввода номера телефона"
+			// 	"Check your phone number and try again."
 			// ),
 			otp: Yup.string()
-				.required("Введите код из СМС")
-				.length(6, "Проверьте правильность ввода кода из СМС"),
+				.required("Enter verification code.")
+				.length(6, "Check your verification code and try again."),
 		}),
 	});
 
@@ -105,6 +106,7 @@ export default function AuthForm() {
 		if (formik.errors.otp && formik.touched.otp)
 			arr.push(formik.errors.otp);
 		if (!formik.errors) {
+			// eslint-disable-next-line react-hooks/exhaustive-deps
 			arr = [];
 		}
 		arr.length > 0 ? setErrorMessages(arr) : setErrorMessages(null);

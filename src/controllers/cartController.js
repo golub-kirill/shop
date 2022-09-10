@@ -1,13 +1,13 @@
 // Save cart data to session storage.
-export function saveCartToSS(cart) {
+export function saveCartToSessionStorage(cart) {
 	sessionStorage.setItem("cart", JSON.stringify(cart));
 }
 // Get cart data from session storage.
-export function getCartFromSS() {
+export function getCartFromSessionStorage() {
 	const cart = sessionStorage.getItem("cart");
 	return cart ? JSON.parse(cart) : null;
 }
 // Remove cart data from session storage.
-export function removeCartFromSS() {
+export function removeCartFromSessionStorage() {
 	sessionStorage.removeItem("cart");
 }

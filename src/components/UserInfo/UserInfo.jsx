@@ -28,7 +28,7 @@ export const UserInfo = ({ isOpen, hideModal }) => {
 				<p className={css.userInfo__title}>
 					{name || phone || "Incognito"}
 				</p>
-				<span className={css.userInfo__label}>Дата регистрации:</span>
+				<span className={css.userInfo__label}>Registration:</span>
 				<p className={css.userInfo__createdAt}>
 					{creationTime || "Never"}
 				</p>
@@ -36,7 +36,7 @@ export const UserInfo = ({ isOpen, hideModal }) => {
 					onClick={() => {
 						signout();
 					}}>
-					Выйти
+					Log out
 				</StyledButton>
 			</div>
 		</div>

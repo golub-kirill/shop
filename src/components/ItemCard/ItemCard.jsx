@@ -75,7 +75,9 @@ export const ItemCard = ({
                                 /[^1-9, 0-9]/g,
                                 ''
                             );
-                            setQuantity(parseInt(e.target.value) || '');
+                            e.target.value > 999
+                                ? (e.target.value = 1000)
+                                : setQuantity(parseInt(e.target.value) || '');
                         }}
                     />
                     <button

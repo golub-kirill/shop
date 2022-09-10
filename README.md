@@ -47,10 +47,11 @@
 <!-- About the Project -->
 ## About the Project
 <p>
-A simple, extensible online store project that can be modified for any theme.
-Test data for login:
--phone: +16505550101
--pass: 123456
+A simple, extensible online store project that can be modified for any theme. <br/>
+
+<h3>Test data for login:<h3/>
+-phone: +16505550101 <br/>
+-pass: 123456 <br/>
 </p>
 
 <div align="center"> 

@@ -1,5 +1,6 @@
 import React from "react";
 import css from "./styles.module.css";
+import errSvg from '../../../assets/svg/error.svg'
 
 export default function ErrorsPopup(props) {
 	if (!props.errorMessages) return null;
@@ -29,7 +30,7 @@ export default function ErrorsPopup(props) {
 			{Object.values(errors).map((error) => (
 				<div className={css.error__message} key={error}>
 					<img
-						src="/img/svg/error.svg"
+						src={errSvg}
 						alt="error"
 						className={css.error__img}
 					/>
